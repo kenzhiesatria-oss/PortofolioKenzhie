@@ -1,1 +1,208 @@
-.
+
+/* ===== 1. PENGATURAN DASAR ===== */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #f8fafc;
+    background: linear-gradient(
+        135deg,
+        #111827,
+        #1e293b,
+        #111827
+    );
+}
+
+/* ===== 2. HEADER ===== */
+header {
+    display: none;
+}
+
+/* ===== 3. HOME / HERO ===== */
+#home {
+    text-align: center;
+    padding: 65px 20px 45px;
+    background: linear-gradient(
+        135deg,
+        #172033,
+        #202b46
+    );
+}
+
+#home h2 {
+    margin: 0 0 12px;
+    font-size: clamp(30px, 5vw, 44px);
+    font-weight: bold;
+}
+
+#home h2 span {
+    color: #a78bfa;
+}
+
+#home p {
+    color: #b8c5d9;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* ===== 4. TOMBOL ===== */
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 24px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 16px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.btn.primary {
+    background: #5145e5;
+    color: white;
+    border: 1px solid #7167ff;
+}
+
+.btn.light {
+    background: #f1f5f9;
+    color: #263047;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.15);
+}
+
+/* ===== 5. PROJECTS ===== */
+#projects {
+    max-width: 1100px;
+    margin: auto;
+    padding: 25px 24px 55px;
+}
+
+#projects > h2 {
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+#projects > .subtitle {
+    text-align: center;
+    color: #94a3b8;
+    font-size: 13px;
+    margin-bottom: 32px;
+}
+
+/* Tata letak kartu proyek */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(min(100%, 220px), 1fr)
+    );
+    gap: 20px;
+}
+
+/* Tampilan kartu */
+.project-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 22px 18px;
+    border: 1px solid #343c70;
+    border-radius: 10px;
+    background: linear-gradient(
+        160deg,
+        #303576,
+        #202541 55%,
+        #151b2c
+    );
+    box-shadow: 0 10px 25px #080d1a40;
+    transition: 0.25s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: #8b80ff;
+}
+
+.project-card h3 {
+    font-size: 16px;
+    margin: 28px 0 10px;
+}
+
+.project-card p {
+    color: #b8c2d5;
+    font-size: 12px;
+    line-height: 1.7;
+    margin: 0 0 14px;
+}
+
+/* Label teknologi */
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 18px;
+}
+
+.tags span {
+    font-size: 10px;
+    color: #c4b5fd;
+    background: #5145e530;
+    border: 1px solid #7167ff55;
+    border-radius: 20px;
+    padding: 5px 9px;
+}
+
+/* ===== 6. CONTACT ===== */
+#contact {
+    text-align: center;
+    padding: 35px 20px 55px;
+}
+
+#contact p {
+    color: #b8c5d9;
+    font-size: 13px;
+    margin-bottom: 22px;
+}
+
+/* ===== 7. FOOTER ===== */
+footer {
+    text-align: center;
+    padding: 20px 12px;
+    color: #7f8ba3;
+    font-size: 11px;
+    border-top: 1px solid #ffffff12;
+}
+
+/* ===== 8. TAMPILAN HP ===== */
+@media (max-width: 480px) {
+    #home {
+        padding-top: 55px;
+    }
+
+    #projects {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .project-card {
+        padding: 20px;
+    }
+}
